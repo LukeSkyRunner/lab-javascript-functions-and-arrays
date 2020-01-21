@@ -1,15 +1,72 @@
 // Iteration #1: Find the maximum
 
+function maxOfTwoNumbers (a,b) { 
+    if (a > b) {
+      return a;
+    } else if (b > a){
+       return b;
+    }   else if (a === b){
+         return a;
+    }   
+ }
+
+
+
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord (array) {
+  
+  if (array.length === 0){
+    return null;
+  }
+
+  let longest = array[0];
+  
+  for (let word of array) {
+      if (word.length > longest.length){
+        longest = word; 
+      }
+    }
+    return longest;
+   }  
+
+
+
+
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumArray(array) {
+  
+  if (numbers.length===0){
+    return 0;
+  }
+
+let total = 0;
+  
+for (let number of array) {
+    total += number;
+    }
+    return total;
+}
+
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(numbersAvg){
+
+  if (numbersAvg.length===0){
+    return null;
+  }
+  const total = sumArray(array);
+  const average = total / array.length;
+  return average;
+}
 
 // Level 2: Array of strings
 const wordsArr = [
@@ -24,6 +81,12 @@ const wordsArr = [
   'fuel',
   'palace'
 ];
+
+function averageWordLength(wordsArr){
+  if (wordsArr.length===0){
+    return null;
+  }
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -40,6 +103,11 @@ const wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(wordsUnique){
+  if (wordsUnique.length===0){
+    return [];
+  }
+}
 // Iteration #6: Find elements
 const wordsFind = [
   'machine',
@@ -52,6 +120,11 @@ const wordsFind = [
   'disobedience'
 ];
 
+function doesWordExist(wordsFind) {
+  if (wordsFind.length===0){
+    return false;
+  }
+}
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
@@ -67,6 +140,11 @@ const wordsCount = [
   'matter'
 ];
 
+function howManyTimes(wordsCount) {
+  if (howManyTimes.length===0){
+    return 0;
+  }
+}
 // Iteration #8: Bonus
 
 const matrix = [
@@ -91,3 +169,7 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+function greatestProduct(matrix){
+
+}
