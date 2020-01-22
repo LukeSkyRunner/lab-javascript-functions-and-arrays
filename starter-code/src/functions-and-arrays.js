@@ -58,9 +58,8 @@ for (let number of array) {
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(numbersAvg){
-
-  if (numbersAvg.length===0){
+function averageNumbers(array) {
+  if (array.length === 0) {
     return null;
   }
   const total = sumArray(array);
@@ -82,11 +81,23 @@ const wordsArr = [
   'palace'
 ];
 
-function averageWordLength(wordsArr){
-  if (wordsArr.length===0){
+
+function averageWordLength(array){
+  
+  if (array.length===0){
     return null;
   }
+  
+  let total = 0;
+  
+  for (let word of array) {
+      total += word.length;
+      }
+      
+  const average = total / array.length;
+  return average;
 }
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -103,10 +114,18 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray(wordsUnique){
-  if (wordsUnique.length===0){
+function uniquifyArray(array){
+  if (array.length===0){
     return [];
   }
+var uniquifyArray = []
+
+for(i=0; i < array.length; i++){
+  if(array.indexOf(array[i]) === -1) {
+      uniquifyArray.push(array[i]);
+  }
+}
+return uniquifyArray;
 }
 // Iteration #6: Find elements
 const wordsFind = [
